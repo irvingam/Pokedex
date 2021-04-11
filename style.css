@@ -1,0 +1,33 @@
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Custom Properties */ 
+:root {
+    --ff: 'DotGothic16', sans-serif;
+    --fw: 400;
+
+    --clr-light: rgba(225, 255, 255);
+    --clr-dark: rgba(0, 0, 0);
+    
+
+    
+}
+
+/* General Styles */
+body {
+    font-family: var(--ff);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Class Styles */
