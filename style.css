@@ -7,8 +7,10 @@
 
 /* Custom Properties */ 
 :root {
-    --ff: 'DotGothic16', sans-serif;
-    --fw: 400;
+    --ff: 'Ubuntu', sans-serif;
+    --fw-normal: 400;
+    --fw-bold: 700;
+
 
     --clr-light: rgba(225, 255, 255);
     --clr-dark: rgba(0, 0, 0);
@@ -22,7 +24,10 @@
 
 /* General Styles */
 body {
-    background: linear-gradient(to right, #d4d3dd, #efefbb);
+    background-image: url(background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: var(--ff);
     font-weight: 400;
     position: relative;
@@ -46,15 +51,17 @@ body {
     padding: 5px;
     border-radius: 20px;
     margin-bottom: 5px;
+    font-weight: var(--fw-bold);
 }
 
 .wrapper {
     background-color: var(--clr-one);
     padding: 20px;
     border: 5px solid;
-    border-radius: 20px;
+    border-radius: 30px;
     margin-top: 2em;
     border-color: var(--clr-light);
+    max-width: 900px;
 }
 
 .container {
@@ -63,7 +70,7 @@ body {
     align-items: space-between;
     justify-content: center;
     margin: 0;
-    max-width: 1200px;
+    max-width: 900px;
     background-color: var(--clr-light);
     padding: 5px;
     border-radius: 20px;
