@@ -22,14 +22,17 @@ const colors = {
 
                     //// Functions ////
 
+// change background based on type
 const mainTypes = Object.keys(colors)
 
+// fetches number of pokemon from API
 const pokemonFetch = async () => {
     for(let i = 1; i <= pokemonCount; i++) {
         await getPokemon(i)
     }
 }
 
+// API fetch function and data collection
 const getPokemon = async (id) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`
     const res = await fetch(url)
@@ -37,6 +40,7 @@ const getPokemon = async (id) => {
     createCard(data)
 }
 
+// generates pokemon cards based on API data
 const createCard = (pokemon) => {
     const pokemonElement = document.createElement('div')
     pokemonElement.classList.add('container_pokemon')
@@ -64,4 +68,5 @@ const createCard = (pokemon) => {
     container.appendChild(pokemonElement)
 }
 
+// fetch funcion call
 pokemonFetch()
